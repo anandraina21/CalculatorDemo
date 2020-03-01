@@ -16,12 +16,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button_clear.setOnClickListener {
-            editText_enter_number_1.setText("")
-            editText_enter_number_2.setText("")
+            editText_enter_number_1.setText("0")
+            editText_enter_number_2.setText("0")
             editText_show_result.setText("")
         }
 
         button_add.setOnClickListener {
+            if (editText_enter_number_1.text.toString().equals(null) || editText_enter_number_1.text.toString().equals(
+                    ""
+                ) || editText_enter_number_1.text.toString().equals(".")
+            ) {
+                editText_enter_number_1.setText("0")
+            }
+
+            if (editText_enter_number_2.text.toString().equals(null) || editText_enter_number_2.text.toString().equals(
+                    ""
+                ) || editText_enter_number_2.text.toString().equals(".")
+            ) {
+                editText_enter_number_2.setText("0")
+            }
+
             var num1: Double = editText_enter_number_1.text.toString().toDouble()
             var num2: Double = editText_enter_number_2.text.toString().toDouble()
             var result: Double = num1 + num2
@@ -30,6 +44,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         button_subtract.setOnClickListener {
+            if (editText_enter_number_1.text.toString().equals(null) || editText_enter_number_1.text.toString().equals(
+                    ""
+                ) || editText_enter_number_1.text.toString().equals(".")
+            ) {
+                editText_enter_number_1.setText("0")
+            }
+
+            if (editText_enter_number_2.text.toString().equals(null) || editText_enter_number_2.text.toString().equals(
+                    ""
+                ) || editText_enter_number_2.text.toString().equals(".")
+            ) {
+                editText_enter_number_2.setText("0")
+            }
+
             var num1: Double = editText_enter_number_1.text.toString().toDouble()
             var num2: Double = editText_enter_number_2.text.toString().toDouble()
             var result: Double = num1 - num2
@@ -38,6 +66,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         button_multiply.setOnClickListener {
+            if (editText_enter_number_1.text.toString().equals(null) || editText_enter_number_1.text.toString().equals(
+                    ""
+                ) || editText_enter_number_1.text.toString().equals(".")
+            ) {
+                editText_enter_number_1.setText("0")
+            }
+
+            if (editText_enter_number_2.text.toString().equals(null) || editText_enter_number_2.text.toString().equals(
+                    ""
+                ) || editText_enter_number_2.text.toString().equals(".")
+            ) {
+                editText_enter_number_2.setText("0")
+            }
+
             var num1: Double = editText_enter_number_1.text.toString().toDouble()
             var num2: Double = editText_enter_number_2.text.toString().toDouble()
             var result: Double = num1 * num2
@@ -46,6 +88,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         button_divide.setOnClickListener {
+            if (editText_enter_number_1.text.toString().equals(null) || editText_enter_number_1.text.toString().equals(
+                    ""
+                ) || editText_enter_number_1.text.toString().equals(".")
+            ) {
+                editText_enter_number_1.setText("0")
+            }
+
+            if (editText_enter_number_2.text.toString().equals(null) || editText_enter_number_2.text.toString().equals(
+                    ""
+                ) || editText_enter_number_2.text.toString().equals(".")
+            ) {
+                editText_enter_number_2.setText("0")
+            }
+
             var num1: Double = editText_enter_number_1.text.toString().toDouble()
             var num2: Double = editText_enter_number_2.text.toString().toDouble()
             var result: Double = num1 / num2
